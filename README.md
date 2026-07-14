@@ -1,0 +1,3 @@
+Shortens usernames in all Menus and HUD elements with names. Fully customizable!
+
+Completely compatible with who are you, true level, teammate tracker, etc...
