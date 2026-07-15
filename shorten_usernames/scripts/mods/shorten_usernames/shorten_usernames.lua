@@ -56,10 +56,6 @@ local _shorten_name = function(text, max_length, truncation_string)
 		end
 	end
 
-	if truncated then
-		result = result .. "{#reset()}"
-	end
-
 	return result
 end
 
