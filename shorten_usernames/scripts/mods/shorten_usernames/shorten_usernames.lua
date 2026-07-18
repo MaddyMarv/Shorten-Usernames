@@ -114,46 +114,61 @@ mod:hook(CLASS.RemotePlayer, "name", function(func, self)
 	return mod.shorten(name, false)
 end)
 
+local _shorten_account_name = function(name, account_id)
+	if not name then
+		return name
+	end
+	local is_self = _is_myself(account_id)
+
+	if is_self then
+		if not mod:get("shorten_myself") then
+			return name
+		end
+	else
+		if not mod:get("shorten_teammates") then
+			return name
+		end
+	end
+
+	if not mod:get("enable_shorten_account_name") then
+		return name
+	end
+
+	if mod:get("only_in_gameplay") and not _is_in_gameplay() then
+		return name
+	end
+
+	local icon_prefix = ""
+	if name and string.len(name) > 4
+		and string.byte(name, 1) == 0xEE
+		and string.byte(name, 2) == 0x81
+		and string.byte(name, 4) == 0x20 then
+		icon_prefix = string.sub(name, 1, 4)
+		name = string.sub(name, 5)
+	end
+
+	local max_len = mod:get("max_length_account_name")
+	local truncation_string = mod:get("truncation_string")
+	return icon_prefix .. _shorten_name(name, max_len, truncation_string)
+end
+
 mod.on_all_mods_loaded = function()
 	local who_are_you = get_mod("who_are_you")
 	if who_are_you then
 		mod:hook(who_are_you, "account_name", function(func, id)
 			local name = func(id)
-			if not name then
-				return name
-			end
-			local is_self = _is_myself(id)
+			return _shorten_account_name(name, id)
+		end)
+	end
 
-			if is_self then
-				if not mod:get("shorten_myself") then
-					return name
-				end
-			else
-				if not mod:get("shorten_teammates") then
-					return name
-				end
+	local state_your_name = get_mod("state_your_name")
+	if state_your_name and state_your_name.identity then
+		mod:hook(state_your_name.identity, "record", function(func, self, account_id, profile, character_name, player_info, slot_color)
+			local record = func(self, account_id, profile, character_name, player_info, slot_color)
+			if record and record.account_name then
+				record.account_name = _shorten_account_name(record.account_name, account_id)
 			end
-
-			if not mod:get("enable_shorten_account_name") then
-				return name
-			end
-
-			if mod:get("only_in_gameplay") and not _is_in_gameplay() then
-				return name
-			end
-
-			local icon_prefix = ""
-			if name and string.len(name) > 4
-				and string.byte(name, 1) == 0xEE
-				and string.byte(name, 2) == 0x81
-				and string.byte(name, 4) == 0x20 then
-				icon_prefix = string.sub(name, 1, 4)
-				name = string.sub(name, 5)
-			end
-
-			local max_len = mod:get("max_length_account_name")
-			local truncation_string = mod:get("truncation_string")
-			return icon_prefix .. _shorten_name(name, max_len, truncation_string)
+			return record
 		end)
 	end
 end
