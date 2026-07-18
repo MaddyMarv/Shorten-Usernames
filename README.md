@@ -1,4 +1,5 @@
 ### [Shorten Usernames](https://www.nexusmods.com/warhammer40kdarktide/mods/641)
+<img width="1304" height="497" alt="image" src="https://github.com/user-attachments/assets/23f0c884-8baa-4d08-a853-36b36bcee5b7" />
 
 Standalone mod that fixes massive usernames taking up half your screen. You can set a max character limit for character names and account names. It lets you shorten your own name and your teammates' names. You can pick how it cuts off the name, like adding dots or dashes at the end. You can also set it to only work during gameplay so you still see full names in the hub.
 
