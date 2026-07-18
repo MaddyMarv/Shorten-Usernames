@@ -42,9 +42,9 @@ local _shorten_name = function(text, max_length, truncation_string)
 					char_bytes = 2
 				end
 			end
-			
+
 			local char = string.sub(text, i, i + char_bytes - 1)
-			
+
 			visible_len = visible_len + 1
 			if visible_len <= max_length then
 				result = result .. char
