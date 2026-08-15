@@ -1,0 +1,14 @@
+{
+    "name": "Shorten Usernames",
+    "author": "IndicaBunny",
+    "version": "1.7",
+    "source": "https://github.com/MaddyMarv/Shorten-Usernames",
+    "kofi": "https://ko-fi.com/indicabunny",
+    "description": "Shortens super long usernames in the HUD so they stop blocking your screen.",
+    "order": {
+        "require": [],
+        "this_before": [],
+        "this_after": []
+    },
+    "localization": {}
+}
