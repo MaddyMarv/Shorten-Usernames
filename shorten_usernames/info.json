@@ -8,10 +8,11 @@
         "kofi": "https://ko-fi.com/indicabunny"
     },
     "description": "Shortens super long usernames in the HUD so they stop blocking your screen.",
-    "order": {
-        "require": [],
-        "this_before": [],
-        "this_after": []
+    "dependencies": {
+        "required": [],
+        "optional": [],
+        "self_before": [],
+        "self_after": []
     },
     "localization": {}
 }
