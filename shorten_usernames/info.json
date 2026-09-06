@@ -7,7 +7,7 @@
     "funding": {
         "kofi": "https://ko-fi.com/indicabunny"
     },
-    "description": "Shortens super long usernames in the HUD so they stop blocking your screen.",
+    "description": "Shortens long player and character names on your HUD with customizable character limits and truncation styles.",
     "dependencies": {
         "required": [],
         "self_after": [],
