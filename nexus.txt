@@ -14,4 +14,5 @@ Standalone mod that fixes massive usernames taking up half your screen. You can 
 - Enable Shorten Account Name
 - Max Account Name Length
 
-[b]Links:[/b] [url=https://github.com/MaddyMarv/Shorten-Usernames]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
+[b]Links:[/b]
+[url=https://github.com/MaddyMarv/Shorten-Usernames]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
