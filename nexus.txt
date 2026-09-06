@@ -1,0 +1,17 @@
+Standalone mod that fixes massive usernames taking up half your screen. You can set a max character limit for character names and account names. It lets you shorten your own name and your teammates' names. You can pick how it cuts off the name, like adding dots or dashes at the end. You can also set it to only work during gameplay so you still see full names in the hub.
+
+[b]Options:[/b]
+
+[b]General[/b]
+- Shorten Myself
+- Shorten Teammates
+- Only Shorten in Gameplay
+- Truncation String [..., .., ., -, ~, None]
+
+[b]Lengths[/b]
+- Enable Shorten Character Name
+- Max Character Name Length
+- Enable Shorten Account Name
+- Max Account Name Length
+
+[b]Links:[/b] [url=https://github.com/MaddyMarv/Shorten-Usernames]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
