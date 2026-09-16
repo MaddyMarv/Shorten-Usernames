@@ -1,6 +1,6 @@
 return {
 	run = function()
-		fassert(rawget(_G, "new_mod"), "`shorten_usernames` mod must be lower than DMF in load order.")
+		fassert(rawget(_G, "new_mod"), "`shorten_usernames` encountered an error loading the Darktide Mod Framework.")
 
 		new_mod("shorten_usernames", {
 			mod_script       = "shorten_usernames/scripts/mods/shorten_usernames/shorten_usernames",
