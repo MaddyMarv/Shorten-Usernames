@@ -1,7 +1,7 @@
 Shortens long player and character names on your HUD with customizable character limits and truncation styles.
 
-[b]Options:[/b]
-
+[b]Mod Settings / Commands:[/b]
+[spoiler]
 [b]General[/b]
 - Shorten Myself
 - Shorten Teammates
@@ -13,6 +13,7 @@ Shortens long player and character names on your HUD with customizable character
 - Max Character Name Length
 - Enable Shorten Account Name
 - Max Account Name Length
+[/spoiler]
 
 [b]Links:[/b]
 [url=https://github.com/MaddyMarv/Shorten-Usernames]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
