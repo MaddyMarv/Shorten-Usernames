@@ -31,15 +31,15 @@ return {
 						type = "dropdown",
 						default_value = ".",
 						options = {
-							{text = "truncation_option_ellipsis", value = "..."},
-							{text = "truncation_option_two_dots", value = ".."},
-							{text = "truncation_option_dot", value = "."},
-							{text = "truncation_option_hyphen", value = "-"},
-							{text = "truncation_option_tilde", value = "~"},
-							{text = "truncation_option_none", value = ""},
+							{ text = "truncation_option_ellipsis", value = "..." },
+							{ text = "truncation_option_two_dots", value = ".." },
+							{ text = "truncation_option_dot", value = "." },
+							{ text = "truncation_option_hyphen", value = "-" },
+							{ text = "truncation_option_tilde", value = "~" },
+							{ text = "truncation_option_none", value = "" },
 						},
 					},
-				}
+				},
 			},
 			{
 				setting_id = "length_settings",
@@ -59,7 +59,7 @@ return {
 								setting_id = "max_length",
 								type = "numeric",
 								default_value = 20,
-								range = {1, 30},
+								range = { 1, 30 },
 							},
 						},
 					},
@@ -76,12 +76,12 @@ return {
 								setting_id = "max_length_account_name",
 								type = "numeric",
 								default_value = 20,
-								range = {1, 30},
+								range = { 1, 30 },
 							},
 						},
 					},
-				}
-			}
-		}
-	}
+				},
+			},
+		},
+	},
 }

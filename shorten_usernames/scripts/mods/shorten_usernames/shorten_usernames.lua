@@ -12,7 +12,7 @@ local _shorten_name = function(text, max_length, truncation_string)
 	local truncated = false
 
 	while i <= len do
-		if string.sub(text, i, i+1) == "{#" then
+		if string.sub(text, i, i + 1) == "{#" then
 			local j = string.find(text, "}", i)
 			if j then
 				result = result .. string.sub(text, i, j)
@@ -139,10 +139,13 @@ local _shorten_account_name = function(name, account_id)
 	end
 
 	local icon_prefix = ""
-	if name and string.len(name) > 4
+	if
+		name
+		and string.len(name) > 4
 		and string.byte(name, 1) == 0xEE
 		and string.byte(name, 2) == 0x81
-		and string.byte(name, 4) == 0x20 then
+		and string.byte(name, 4) == 0x20
+	then
 		icon_prefix = string.sub(name, 1, 4)
 		name = string.sub(name, 5)
 	end
@@ -163,12 +166,16 @@ mod.on_all_mods_loaded = function()
 
 	local state_your_name = get_mod("state_your_name")
 	if state_your_name and state_your_name.identity then
-		mod:hook(state_your_name.identity, "record", function(func, self, account_id, profile, character_name, player_info, slot_color)
-			local record = func(self, account_id, profile, character_name, player_info, slot_color)
-			if record and record.account_name then
-				record.account_name = _shorten_account_name(record.account_name, account_id)
+		mod:hook(
+			state_your_name.identity,
+			"record",
+			function(func, self, account_id, profile, character_name, player_info, slot_color)
+				local record = func(self, account_id, profile, character_name, player_info, slot_color)
+				if record and record.account_name then
+					record.account_name = _shorten_account_name(record.account_name, account_id)
+				end
+				return record
 			end
-			return record
-		end)
+		)
 	end
 end
