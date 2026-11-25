@@ -13,9 +13,9 @@ Shortens long player and character names on your HUD with customizable character
 - Truncation String [..., .., ., -, ~, None]
 
 **Lengths**
-- Enable Shorten Character Name
-- Max Character Name Length
-- Enable Shorten Account Name
+- Shorten Character Name
+- Character Name Max Length
+- Shorten Account Name
 - Max Account Name Length
 </details>
 

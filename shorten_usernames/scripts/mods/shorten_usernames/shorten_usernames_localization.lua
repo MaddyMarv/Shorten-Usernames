@@ -1,4 +1,7 @@
 return {
+	mod_name = {
+		en = "Shorten Usernames",
+	},
 	mod_description = {
 		en = "Shortens long player and character names on your HUD with customizable character limits and truncation styles.",
 	},
